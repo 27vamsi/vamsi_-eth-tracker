@@ -30,12 +30,12 @@ async function setupDepositListener() {
         const depositData = {
             pubkey: pubkey,
             withdrawalCredentials: withdrawal_credentials,
-            amount: ethers.utils.formatEther(amount), // Convert from Wei to ETH
+            amount: ethers.utils.formatEther(amount), 
             signature: signature,
             index: index.toString(),
             blockNumber: blockNumber,
-            blockTimestamp: new Date(block.timestamp * 1000).toISOString(), // Convert Unix timestamp to ISO string
-            fee: ethers.utils.formatEther(transaction.gasPrice.mul(transaction.gasLimit)), // Calculate fee
+            blockTimestamp: new Date(block.timestamp * 1000).toISOString(), 
+            fee: ethers.utils.formatEther(transaction.gasPrice.mul(transaction.gasLimit)), 
             hash: transactionHash,
             timestamp: new Date().toISOString()
         };
@@ -74,7 +74,7 @@ provider._websocket.on('close', () => {
 
     setTimeout(() => {
         provider._websocket = new ethers.providers.WebSocketProvider(ALCHEMY_WEBSOCKET_URL);
-        setupDepositListener(); // Re-establish the deposit listener
+        setupDepositListener(); 
     }, 5000);
 });
 
