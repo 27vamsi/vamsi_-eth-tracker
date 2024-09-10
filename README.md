@@ -1,5 +1,4 @@
-Ethereum Deposit Tracker
-Overview
+
 The Ethereum Deposit Tracker is a Node.js application designed to monitor and log deposit events on the Ethereum Beacon Deposit Contract. It uses the Alchemy WebSocket API to listen for deposit events and logs the relevant details to both a log file and a text file. The application also supports basic error handling and reconnection logic for the WebSocket provider.
 
 Features:
