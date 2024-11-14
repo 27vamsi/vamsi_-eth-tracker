@@ -74,7 +74,7 @@ provider._websocket.on('close', () => {
 
     setTimeout(() => {
         provider._websocket = new ethers.providers.WebSocketProvider(ALCHEMY_WEBSOCKET_URL);
-        setupDepositListener(); // Re-establish the deposit listener
+        setupDepositListener(); 
     }, 5000);
 });
 
